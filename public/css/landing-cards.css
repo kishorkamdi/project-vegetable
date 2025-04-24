@@ -1,0 +1,82 @@
+/* public/css/landing-cards.css */
+
+/* Override card sizes on landing page */
+
+/* Popular Cuisines cards */
+.popular-cuisines .cuisine-card {
+    max-width: 350px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.popular-cuisines .cuisine-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.popular-cuisines .cuisine-card img {
+    flex-grow: 1;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.popular-cuisines .cuisine-overlay {
+    background: rgba(44, 94, 46, 0.7);
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+}
+
+/* Popular Categories cards */
+.popular-categories .category-card {
+    max-width: 400px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.popular-categories .category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.popular-categories .category-card img {
+    flex-grow: 1;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.popular-categories .category-overlay {
+    background: rgba(44, 94, 46, 0.7);
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+}
+
+/* Product Cards */
+.product-card {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card img.card-img-top {
+    height: 240px;
+}

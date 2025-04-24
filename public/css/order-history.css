@@ -1,0 +1,120 @@
+/* Styles for Order History Page */
+
+.order-history-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.order-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: box-shadow 0.3s ease;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-card:hover {
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.order-card-header {
+    background-color: var(--btn-primary-bg);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.order-card-body {
+    padding: 0 1rem 1rem 1rem;
+    color: var(--card-text-color);
+}
+
+.order-items-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.order-items-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.order-items-list li:last-child {
+    border-bottom: none;
+}
+
+.order-item-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.order-item-info img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.order-item-name {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.order-item-qty {
+    font-size: 1rem;
+    color: var(--card-text-strong-color);
+    margin-left: 0.5rem;
+}
+
+.order-item-price {
+    font-weight: 700;
+    color: var(--btn-primary-bg);
+    min-width: 80px;
+    text-align: right;
+}
+
+.order-total {
+    text-align: right;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--btn-success-bg);
+    margin-top: 1rem;
+}
+
+.no-orders-message {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--card-text-color);
+    margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+    .order-item-info img {
+        width: 100px;
+        height: 100px;
+        margin-right: 0.5rem;
+    }
+    .order-total {
+        font-size: 1.1rem;
+    }
+    .order-card {
+        padding: 0.5rem;
+    }
+}
