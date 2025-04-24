@@ -26,12 +26,12 @@
                                     <span class="order-item-name"><%= item.name %></span>
                                     <span class="order-item-qty">(Qty: <%= item.quantity %>)</span>
                                 </div>
-                                <span class="order-item-price">$<%= (item.price * item.quantity).toFixed(2) %></span>
+                                <span class="order-item-price">Price : <%= (item.price * item.quantity).toFixed(2) %></span>
                             </li>
                         <% }); %>
                     </ul>
                     <hr>
-                    <div class="order-total">Order Total: $<%= order.total %></div>
+                    <div class="order-total">Order Total Price: <%= order.total %></div>
                 </div>
             </div>
         <% }); %>

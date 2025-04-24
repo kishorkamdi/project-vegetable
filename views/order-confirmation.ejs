@@ -33,12 +33,12 @@
                                     <% } %>
                                     <span><%= item.name %> <span class="text-muted">(Qty: <%= item.quantity %>)</span></span>
                                 </div>
-                                <span class="badge bg-secondary rounded-pill">$<%= (item.price * item.quantity).toFixed(2) %></span>
+                                <span class="badge bg-secondary rounded-pill">Price : <%= (item.price * item.quantity).toFixed(2) %></span>
                             </li>
                         <% }); %>
                     </ul>
                     <hr>
-                    <h5 class="text-end">Order Total: <span class="text-success">$<%= order.total %></span></h5>
+                    <h5 class="text-end">Order Total: <span class="text-success">Price : <%= order.total %></span></h5>
                 </div>
             </div>
         </div>

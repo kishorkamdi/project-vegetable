@@ -13,12 +13,12 @@
                         <h6 class="my-0"><%= item.name %></h6>
                         <small class="text-muted">Quantity: <%= item.quantity %></small>
                     </div>
-                    <span class="text-muted">$<%= item.itemTotal %></span>
+                    <span class="text-muted">Price : <%= item.itemTotal %></span>
                 </li>
             <% }); %>
             <li class="list-group-item d-flex justify-content-between bg-light">
-                <strong class="text-success">Total (INR)</strong>
-                <strong class="text-success">$<%= cartTotal %></strong>
+                <strong class="text-success">Total (INR) :</strong>
+                <strong class="text-success">Price : <%= cartTotal %></strong>
             </li>
         </ul>
     </div>
