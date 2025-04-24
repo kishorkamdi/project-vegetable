@@ -172,18 +172,20 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// GET /auth/logout - Handle logout
 router.get('/logout', (req, res, next) => {
     req.session.destroy((err) => {
         if (err) {
             console.error("Logout Error:", err);
-            req.flash('error_msg', 'Could not log out. Please try again.');
-            // Even if error, try to redirect
+            if (req.flash && req.session) {
+                req.flash('error_msg', 'Could not log out. Please try again.');
+            }
             return res.redirect('/');
         }
         console.log('User logged out');
-        res.clearCookie('connect.sid'); // Optional: clear the session cookie name used by express-session
-        req.flash('success_msg', 'You have been logged out.');
+        res.clearCookie('connect.sid', { path: '/' });
+        if (req.flash && req.session) {
+            req.flash('success_msg', 'You have been logged out.');
+        }
         res.redirect('/');
     });
 });
