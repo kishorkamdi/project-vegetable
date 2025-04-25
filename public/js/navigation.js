@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   const mainContainer = document.querySelector('main.container');
 
+  function updateActiveNav() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPath = window.location.pathname;
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
   function loadPage(url) {
     fetch(url, {
       headers: {
@@ -22,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainContainer.innerHTML = newMain.innerHTML;
         document.title = doc.title;
         window.history.pushState(null, '', url);
+        updateActiveNav();
       }
     })
     .catch(error => {
@@ -41,4 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('popstate', () => {
     loadPage(window.location.href);
   });
+
+  updateActiveNav();
 });
