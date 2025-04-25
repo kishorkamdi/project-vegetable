@@ -73,6 +73,7 @@
     "is-fullwidth-code-point": "^3.0.0",
     "is-promise": "^4.0.0",
     "jake": "^10.9.2",
+    "lazysizes": "^5.3.2",
     "make-dir": "^3.1.0",
     "math-intrinsics": "^1.1.0",
     "media-typer": "^1.1.0",

@@ -17,6 +17,19 @@
 
     <!-- Dark Mode Toggle JS -->
     <script src="/js/dark-mode-toggle.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/js/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+    <script src="/js/navigation.js" defer></script>
 </head>
 <body class="dark-mode">
     <%- include('nav') %>
